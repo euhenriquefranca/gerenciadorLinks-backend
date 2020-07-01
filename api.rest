@@ -1,5 +1,4 @@
 @baseUrl = http://localhost:3001
-
 @contentType = application/json
 
 

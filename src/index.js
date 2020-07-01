@@ -1,10 +1,13 @@
 // servidor
 const express = require('express');
 const db = require('./models');
+const response = require('./middlewares/response');
 
 const authController = require('./controllers/auth');
 
 const app = express();
+
+app.use(response);
 
 app.use(express.json()); // receb os dados que vierem em json
 app.use(express.urlencoded({ extended: false })); // ele pega o body da requisição
