@@ -1,7 +1,5 @@
 const express = require('express');
-
 const { Link } = require('../models');
-
 const router = express.Router();
 
 router.get('/', async (req, res) => {
