@@ -23,3 +23,40 @@ Content-Type: {{contentType}}
   "password": "123456",
   "password_confirmation": "123456"
 }
+
+### List Links
+
+GET {{baseUrl}}/link
+Content-Type: {{contentType}}
+
+### Create Link
+
+POST {{baseUrl}}/link
+Content-Type: {{contentType}}
+
+{
+  "label": "Meu site 2",
+  "url": "https://emersonbroga.com",
+  "isSocial": false
+}
+
+### Get a link by id
+GET {{baseUrl}}/link/1
+Content-Type: {{contentType}}
+
+
+### Update a Link1
+
+PUT {{baseUrl}}/link/1
+Content-Type: {{contentType}}
+
+{
+  "label": "Meu novo site",
+  "url": "https://facebook.com",
+  "isSocial": true
+}
+
+### Delete a Link
+
+DELETE  {{baseUrl}}/link/5
+Content-Type: {{contentType}}

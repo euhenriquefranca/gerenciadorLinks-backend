@@ -4,6 +4,7 @@ const db = require('./models');
 const response = require('./middlewares/response');
 
 const authController = require('./controllers/auth');
+const linkController = require('./controllers/link');
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.use(express.urlencoded({ extended: false })); // ele pega o body da requisi�
 // /auth/sign-in
 // /auth/sign-up
 app.use('/auth', authController);
+app.use('/link', linkController);
 
 // req - referente a todas informações da nossa requisição e response traz métodos para efetuar a respota ao browser.
 app.get('/', (req, res) => {
