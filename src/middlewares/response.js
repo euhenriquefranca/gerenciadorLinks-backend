@@ -28,7 +28,7 @@ const jsonBadRequest = function (data, message, metadata) {
   return this.json({ message, data, metadata, status: status });
 };
 
-const jsonUnathorized = function (data, message, metadata) {
+const jsonUnauthorized = function (data, message, metadata) {
   const status = STATUS_CODE_UNAUTHORIZED;
   message = (message) ? message : getMessage('response.json_unauthorized');
   metadata = (metadata) ? metadata : {};
@@ -62,7 +62,7 @@ const jsonServerError = function (data, message, metadata) {
 const response = (req, res, next) => {
   res.jsonOK = jsonOK;
   res.jsonBadRequest = jsonBadRequest;
-  res.jsonUnathorized = jsonUnathorized;
+  res.jsonUnauthorized = jsonUnauthorized;
   res.jsonNotFound = jsonNotFound;
   res.jsonServerError = jsonServerError;
 

@@ -1,6 +1,8 @@
 @baseUrl = http://localhost:3001
 @contentType = application/json
 
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNTkzNzE2NTk1LCJleHAiOjE1OTM3MTgzOTV9.QkUFs1PKWiOd5AZTHmANfkAmr40tYbS6cNVjY3hl8yo
+
 
 ### Create a Account
 
@@ -19,15 +21,15 @@ POST {{baseUrl}}/auth/sign-in
 Content-Type: {{contentType}}
 
 {
-  "email": "euhenriquefranca9@gmail.com",
+  "email": "euhenriquefranca1@gmail.com",
   "password": "123456",
-  "password_confirmation": "123456"
 }
 
 ### List Links
 
 GET {{baseUrl}}/link
 Content-Type: {{contentType}}
+Authorization: Bearer {{token}}
 
 ### Create Link
 
