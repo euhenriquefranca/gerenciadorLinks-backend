@@ -2,7 +2,7 @@
 @contentType = application/json
 
 @token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNTkzNzE2NTk1LCJleHAiOjE1OTM3MTgzOTV9.QkUFs1PKWiOd5AZTHmANfkAmr40tYbS6cNVjY3hl8yo
-
+@refreshToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidmVyc2lvbiI6MCwiaWF0IjoxNTkzNzg1MDE2LCJleHAiOjE1OTYzNzcwMTZ9.Cd18AxbD4OyCdx1OXJUGJL_OPiOsS8zlO3kBEYbC58c
 
 ### Create a Account
 
@@ -24,6 +24,11 @@ Content-Type: {{contentType}}
   "email": "euhenriquefranca1@gmail.com",
   "password": "123456"
 }
+
+### Refresh
+POST {{baseUrl}}/auth/refresh
+Content-Type: {{contentType}}
+Authorization: Bearer {{refreshToken}}
 
 ### List Links
 
