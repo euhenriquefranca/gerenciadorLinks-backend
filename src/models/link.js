@@ -18,11 +18,10 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       default: 0,
     },
-
   });
 
   Link.associate = (models) => {
-    Link.belongsTo(models.Account, { foreignKey: 'account' });
+    Link.belongsTo(models.Account, { foreignKey: 'accountId' });
   };
 
 

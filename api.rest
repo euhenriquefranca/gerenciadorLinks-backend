@@ -22,7 +22,7 @@ Content-Type: {{contentType}}
 
 {
   "email": "euhenriquefranca1@gmail.com",
-  "password": "123456",
+  "password": "123456"
 }
 
 ### List Links
